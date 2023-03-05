@@ -1,0 +1,17 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #F5F7FB;
+  font-family: 'Karla', sans-serif;
+  color: #293264;
+}
+
+button{
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+}
