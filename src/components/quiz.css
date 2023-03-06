@@ -87,9 +87,8 @@
 
 .reset-container {
   display: flex;
-  gap: .5em;
+  gap: 1em;
   align-items: center;
-  justify-content: space-around;
 }
 
 @media (max-width: 700px) {
@@ -100,5 +99,10 @@
 
   .quiz--title {
     font-size: 1.2rem;
+  }
+
+  .reset-container {
+    justify-content: space-around;
+    gap: .5em;
   }
 }
