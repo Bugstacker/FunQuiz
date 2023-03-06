@@ -90,3 +90,14 @@
   gap: 1em;
   align-items: center;
 }
+
+@media (max-width: 700px) {
+  .quiz--answers {
+    grid-template-columns: repeat(2, 1fr);
+    font-size: .825rem;
+  }
+
+  .quiz--title {
+    font-size: 1.2rem;
+  }
+}
