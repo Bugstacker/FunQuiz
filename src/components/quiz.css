@@ -87,8 +87,9 @@
 
 .reset-container {
   display: flex;
-  gap: 1em;
+  gap: .5em;
   align-items: center;
+  justify-content: space-around;
 }
 
 @media (max-width: 700px) {
