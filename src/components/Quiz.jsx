@@ -9,12 +9,21 @@ const Quiz = () => {
   let [score, setScore] = useState(0)
 
   useEffect(() => {
-    fetch('https://opentdb.com/api.php?amount=5')
-      .then(res => res.json())
-      .then(data => {
-        setQuestions(data.results);
-      })
-      .catch(e => console.error(e));
+
+      async function getQuizData() {
+        try {
+
+          const res = await fetch('https://opentdb.com/api.php?amount=5')
+          if(!res.ok){throw new Error(res.statusText)}
+          const data = await res.json()
+          setQuestions(data.results)
+
+        } catch (e) {
+          alert(`${e}`)
+        }
+      }
+
+      getQuizData()
   }, [isReset])
 
   const handleSelectAnswer = (questionIndex, answer) => {
